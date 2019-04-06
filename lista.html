@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de notas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 2%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Proyecto</h1>
+    <p>La idea es que cuando se haga clic en el botón Registrar Estudiante se capturen los siguientes datos: el código, el nombre, y la nota digitada. Estos datos hay que guardarlos como un objeto estudiante en un JSON para luego utilizarlo.</p>
+    <p>Con JavaScript se debe manipular el DOM agregando el estudiante a la tabla. Los otros botones tienen la misma funcionalidad de la actividad del proyecto del curso 1, la única diferencia es que el mensaje se mostrará en alerts.</p>
+    <p>Para recordar: el botón Mostrar Promedio mostrará la nota promedio de los estudiantes, el botón Mostrar Nota Mayor mostrará la nota mayor entre los estudiantes registrados, y el botón Mostrar Nota Menor mostrará la nota menor entre los estudiantes
+        registrados.
+    </p>
+    <p>Nota: Agregar los eventos clic a través del EventListener.</p>
+
+    <h1>Registro de Estudiante</h1>
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <input type="text" class="form-control" id="code" placeholder="Codigo">
+            </div>
+            <div class="form-group col-md-3">
+                <input type="text" class="form-control" id="name" placeholder="Nombre">
+            </div>
+            <div class="form-group col-md-3">
+                <input type="text" class="form-control" id="score" placeholder="Nota (escala del 1 al 100)">
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-success" id="registrar">Registrar</button>
+        </div>
+    </form>
+    <button type="button" class="btn btn-info" onclick="mostrarStudents();">JSON</button>
+    <button type="button" class="btn btn-info" onclick="promedio();">Promedio</button>
+    <button type="button" class="btn btn-info" onclick="mejorNota();">Mejor nota</button>
+    <button type="button" class="btn btn-info" onclick="peorNota();">Peor nota</button>
+
+    <div>
+        <p id="students"></p>
+        <p id="average"></p>
+        <p id="best"></p>
+        <p id="worst"></p>
+    </div>
+    <script type="text/javascript" src="json.js"></script>
+</body>
+
+</html>
