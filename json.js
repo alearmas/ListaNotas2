@@ -102,14 +102,15 @@ function promedio() {
 
 
 function calcularMejorNota(json) {
-    var score = json.nota;
+    var score = 0;
     var pos = 0;
     var aux = "";
     for (i = 0; i < json.length; i++) {
-        if (score = json[i].nota < score) {
+        if (json[i].nota > score) {
             nota = json[i].nombre;
+			score = json[i].nota;
             pos = i;
-            aux = aux + json[pos].nombre + "<br>";
+            aux = json[pos].nombre + "<br>";
         }
     }
     document.getElementById("best").innerHTML = "La mejor nota fue la de " + aux;
